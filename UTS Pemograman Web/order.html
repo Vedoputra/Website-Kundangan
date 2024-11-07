@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Order</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="judul">KUNDANGAN</h1>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pricelist.html">Pricelist</a></li>
+    <li><a href="order.html">Order</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+</header>
+  <main>
+  <article class="form">
+    <h2 class="order">Order Now</h2>
+    <form action="" class="input">
+        <div>
+          <label for="nama1">Nama Mempelai pria:</label >
+          <input type="text" id="nama1" name="nama1" required />
+        </div>
+        <div>
+          <label for="nama2">Nama Mempelai Wanita:</label >
+          <input type="text" id="nama2" name="nama2" required />
+        </div>
+        <div>
+          <label for="tanggal">Tanggal Pernikahan</label>
+          <input type="text" id="tanggal" name="tanggal" required>
+        </div>
+        <div>
+          <label for="tempat">Tempat pernikahan</label>
+          <input type="text" id="tempat" name="tempat" required>
+        </div>
+        <div>
+          <label for="tipe">Tipe Pemesanan Bronze/Silver/Gold</label>
+          <input type="text" id="tempat" name="tempat" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div>
+          <label for="telp">Nomor Telepon:</label>
+          <input type="number" id="telp" name="telp">
+        </div>
+        <div>
+          <button type="submit" onclick = "tampilkanPesan()">Kirim</button>
+        </div>
+      </form>
+  </article>
+</main>
+
+<script>
+    function tampilkanPesan() {
+        var nama1 = document.getElementById("nama1").value;
+        alert("hello " + nama1 +", Terimakasih atasan pesanannya" )
+    }
+
+    function validateForm() {
+        // Ambil nilai dari input
+        var nama1 = document.getElementById("nama1").value;
+        var nama2 = document.getElementById("nama2").value;
+        var tanggal = document.getElementById("tanggal").value;
+        var email = document.getElementById("email").value;
+        var telp = document.getElementById("telp").value;
+
+        // Cek apakah semua kolom wajib diisi
+        if (nama1 === "" || nama2 === "" || tanggal === "" || email === "" || telp === "") {
+            alert("Semua kolom wajib diisi!");
+            return false;  // Jangan kirim formulir jika ada kolom yang kosong
+        }
+
+        // Validasi format email
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            alert("Harap masukkan alamat email yang valid!");
+            return false;
+        }
+
+        // Jika semua validasi berhasil, formulir bisa dikirim
+        alert("Formulir berhasil dikirim!");
+        return true;
+    }
+</script>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section about ">
+      <h2>Tentang Kami</h2>
+      <p>Kundangan adalah platform undangan digital yang menawarkan,
+         desain modern, dan fitur interaktif untuk berbagai acara spesial Anda.</p>
+    </div>
+    <div class="footer-section links">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricelist.html">Pricelist</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h2>Ikuti Kami</h2>
+      <div class="social-icons">
+        <a href="https://wa.me/081246157541">WhatsApp</a>
+        <a href="mailto:Kundangan@gmail.com">Kundangan@gmail.com</a>
+        <a href="https://www.instagram.com/vedoputra04">Instagram</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Kundangan. All rights reserved.</p>
+  </div>
+</footer>
+  
+</body>
+</html>

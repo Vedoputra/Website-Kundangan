@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="header">
+        <h1 class="judul">KUNDANGAN</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricelist.html">Pricelist</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+      <article class="article1">
+        <div class="text1">
+        <h2>KUNDANGAN</h2>
+        <p>Kundangan adalah platform bisnis inovatif yang menyediakan layanan pembuatan kartu undangan digital. Melalui Kundangan,
+           pengguna dapat membuat dan membagikan undangan acara, seperti pernikahan, ulang tahun, hingga acara bisnis, dengan tampilan yang elegan dan mudah diakses secara online. 
+           Platform ini dirancang untuk memberikan kemudahan bagi pengguna dalam mengirim undangan yang ramah lingkungan, hemat biaya, dan dapat disesuaikan dengan tema serta gaya yang diinginkan.
+          Dengan berbagai pilihan desain modern dan fitur interaktif, 
+          Kundangan hadir untuk membuat setiap momen spesial menjadi lebih berkesan dan mudah dijangkau di era digital ini. </p>
+        </div>
+        <img src="download(1).jpeg" alt="" class="img1" onclick="gantiGambar()" id="gambar">
+      </article>
+
+      <article class="article2">
+        <div class="text2">
+        <h2> Kenapa Butuh Kartu Undangan Digital</h2>
+        <P>Menggunakan kartu undangan digital memberikan banyak keuntungan. Ini ramah lingkungan karena tidak memerlukan kertas, lebih hemat biaya tanpa perlu cetak dan kirim, 
+          serta praktis karena bisa langsung diterima melalui WhatsApp, email, atau media sosial. Dengan desain interaktif, undangan digital juga bisa menampilkan RSVP, peta lokasi, 
+          galeri foto, hingga video, membuatnya lebih menarik dan informatif.</P>
+        </div>
+        <img src="gambar(3).jpeg" alt="" class="img2" onclick="gantiGambarDua()" id="gambarDua">
+      </article>
+  
+    </main>
+     <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section about ">
+          <h2>Tentang Kami</h2>
+          <p>Kundangan adalah platform undangan digital yang menawarkan,
+             desain modern, dan fitur interaktif untuk berbagai acara spesial Anda.</p>
+        </div>
+        <div class="footer-section links">
+          <h2>Menu</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pricelist.html">Pricelist</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h2>Ikuti Kami</h2>
+          <div class="social-icons">
+            <a href="https://wa.me/081246157541">WhatsApp</a>
+            <a href="mailto:Kundangan@gmail.com">Kundangan@gmail.com</a>
+            <a href="https://www.instagram.com/vedoputra04">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Kundangan. All rights reserved.</p>
+      </div>
+    </footer>
+
+      <script>
+        function gantiGambarDua(){
+           var img = document.getElementById("gambarDua");
+           if (
+               img.src.includes(
+               "gambar(3).jpeg"
+               )
+           )
+           {
+               img.src ="gambarjs2.jpeg";
+           } else {
+               img.src = "gambar(3).jpeg"
+           }
+       }
+
+       function gantiGambar(){
+            var img = document.getElementById("gambar");
+            if (
+                img.src.includes(
+                "download(1).jpeg"
+                )
+            )
+            {
+                img.src ="gambarjs.jpeg";
+            } else {
+                img.src = "download(1).jpeg"
+            }
+        }  
+     </script>
+</body>
+</html>
